@@ -1,0 +1,92 @@
+/* ============================================
+   DESIGN SYSTEM - Mujeres En Acción 
+   Coordinadora: Diana Cabrera
+   
+   Justificación Técnica (Basado en el DRS):
+   - RNF-U-02 / RNF-U-06: Diseño Mobile-First, botones grandes, simple.
+   - Sec 4.5: Diseño visual atractivo, sencillo y amigable.
+   - Identidad: Colores basados en el mockup aprobado por el equipo.
+   ============================================ */
+
+:root {
+  /* Colores oficializados del Mockup del equipo */
+  --color-primario: #7C3AED;      /* Morado (Marca / Fondos principales) */
+  --color-secundario: #FCD34D;    /* Amarillo (Botones de acción / "Ingresar") */
+  
+  /* Colores de soporte para texto y fondos */
+  --color-fondo: #F9FAFB;         /* Fondo general claro (no cansa la vista) */
+  --color-texto: #1F2937;         /* Texto principal oscuro (alto contraste) */
+  --color-texto-claro: #6B7280;   /* Texto secundario */
+  --color-blanco: #FFFFFF;
+  --color-error: #EF4444;         /* Rojo para errores */
+  --color-exito: #10B981;         /* Verde para mensajes de éxito */
+  
+  /* Tipografía */
+  --fuente-principal: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  
+  /* Espaciados (Escala oficial para mantener orden) */
+  --espaciado-xs: 0.25rem;  /* 4px */
+  --espaciado-sm: 0.5rem;   /* 8px */
+  --espaciado-md: 1rem;     /* 16px */
+  --espaciado-lg: 1.5rem;   /* 24px */
+  --espaciado-xl: 2rem;     /* 32px */
+  
+  /* Bordes y Sombras */
+  --radio-borde: 12px;        /* Bordes redondeados (amigable) */
+  --sombra-suave: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Reset básico (Limpiar estilos por defecto del navegador) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos globales del cuerpo */
+body {
+  font-family: var(--fuente-principal);
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.6; /* Espacio entre líneas para fácil lectura */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Contenedor principal de React */
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Enlaces */
+a {
+  color: var(--color-primario);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Botones base (Cumple RNF-U-06: Botones grandes y táctiles) */
+button {
+  cursor: pointer;
+  font-family: var(--fuente-principal);
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radio-borde);
+  padding: var(--espaciado-md) var(--espaciado-lg); /* Tamaño grande para dedos */
+  transition: opacity 0.2s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Imágenes responsive (Cumple RNF-U-02: Mobile-First) */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

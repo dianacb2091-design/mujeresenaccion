@@ -1,0 +1,2 @@
+-- Pendiente - Responsable: Anthony Cevallos
+-- Definir políticas de seguridad para la tabla modulos
