@@ -1,26 +1,6 @@
-/* ============================================
-   INDEX.CSS - Estilos Globales Base
-   Mujeres En Acción 
-   Coordinadora: Diana Cabrera
-   ============================================ */
-
-/* 1. Reset de altura y anchura total */
-html, body {
-  height: 100%;
-  width: 100%;
+html, body, #root {
   margin: 0;
   padding: 0;
-}
-
-/* 2. Suavizado de fuentes (Mejor lectura en móviles) */
-body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-}
-
-/* 3. Accesibilidad: Foco visible para navegación por teclado */
-:focus-visible {
-  outline: 2px solid var(--color-primario, #7C3AED);
-  outline-offset: 2px;
+  width: 100%;
+  min-height: 100vh;
 }

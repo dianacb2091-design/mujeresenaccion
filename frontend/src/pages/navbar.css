@@ -1,0 +1,51 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem 1rem;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  min-height: 70px;
+  width: 100%;
+  box-sizing: border-box;
+  flex-wrap: nowrap !important; 
+  gap: 0.6rem;
+  overflow: hidden;
+}
+
+.logo {
+  height: clamp(38px, 8vw, 55px);
+  width: auto;
+  flex-shrink: 0;
+}
+
+.title {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: clamp(1rem, 4vw, 1.6rem);
+  font-weight: 800;
+  color: #d63384;
+  text-transform: uppercase;
+  text-align: center;
+  flex: 1;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ingresar-btn {
+  background: #d63384;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  font-size: clamp(0.8rem, 2.8vw, 0.95rem);
+  font-weight: 700;
+  cursor: pointer;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.ingresar-btn:hover {
+  background: #b02a6d;
+}

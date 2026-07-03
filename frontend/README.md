@@ -1,51 +1,16 @@
-# Frontend - Mujeres En Acción
+# React + Vite
 
-Aplicación React + Vite para la plataforma de recursos de estética.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Comandos
-- Instalación: `npm install`
-- Desarrollo: `npm run dev` (corre en http://localhost:5173)
-- Build: `npm run build`
+Currently, two official plugins are available:
 
-## Estructura de Carpetas
-src/
-├── assets/           # Imágenes y recursos estáticos
-├── components/       # Componentes reutilizables de React
-├── hooks/            # Custom hooks de React
-├── lib/              # Librerías y configuraciones
-│   └── supabaseClient.js  # Conexión a Supabase
-├── pages/            # Vistas/páginas de la aplicación
-├── routes/           # Configuración de rutas (React Router)
-└── services/         # Servicios que conectan con Supabase
-    ├── auth.js           # Autenticación (Anthony)
-    ├── metricas.js       # Métricas (Elizabeth)
-    ├── modulos.js        # Módulos (Elizabeth)
-    ├── recursos.js       # Recursos (Elizabeth)
-    ├── storage.js        # Storage videos/PDFs/imágenes (Diana)
-    └── sugerencias.js    # Sugerencias (Elizabeth)
-    
-## Variables de Entorno
-Crea un archivo `.env` basado en `.env.example`:
-VITE_SUPABASE_URL=la-url-que-comparte-el-equipo
-VITE_SUPABASE_ANON_KEY=la-key-que-comparte-el-equipo
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-Nunca subas el archivo .env a GitHub. Solo se sube .env.example.
+## React Compiler
 
-## Responsables
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-### Arquitectura, Base de Datos y Storage
-- Diana Cabrera: Coordinadora técnica, diseño de tablas en Supabase, configuración de buckets y funciones de subida/descarga. 
+## Expanding the ESLint configuration
 
-### Servicios de Conexión
-- Elizabeth Bueno: Funciones que conectan las pantallas con Supabase. 
-
-### Seguridad (RLS)
-- Anthony Cevallos: Políticas de permisos y roles de acceso.
-
-### Interfaz (Pantallas y Diseño)
-- Jenny García: Home y layout principal
-- Jessica Guano: Navbar y Footer
-- Milton Paladines: Vista de módulos
-- Shirley Sánchez: Vista detalle de módulo
-- Erick Tapia: Vista de sugerencias
-- Teodomiro Valderrama: Panel administrativo y login
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.

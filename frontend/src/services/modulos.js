@@ -1,6 +1,9 @@
-// Pendiente - Elizabeth Bueno
-// Métricas y visualizaciones
-// Responsabilidades:
-// - Registrar visualizaciones de recursos
-// - Obtener estadísticas de uso
-// - Reportes de módulos populares
+import supabase from '../lib/supabaseClient'
+
+export async function getModulos() {
+  const { data, error } = await supabase
+    .from('modulos')
+    .select('*')
+  if (error) throw error
+  return data
+}
